@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Blood - LifeFlow</title>
+    <link rel="stylesheet" href="donor.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="https://i.pinimg.com/736x/78/68/ae/7868ae606b11e951f28b683db70d41a6.jpg" alt="LifeFlow Logo">
+                <h1>LifeFlow</h1>
+            </div>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#" class="active">Donate</a></li>
+                <li><a href="#">Request Blood</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            
+            <div class="nav-buttons">
+                <a href="login.html" class="btn btn-outline">Login</a>
+                <a href="register.html" class="btn btn-primary">Register</a>
+            </div>
+            
+            <div class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Donate Hero Section -->
+    <section class="page-hero">
+        <div class="shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+            <div class="shape shape-5"></div>
+        </div>
+        <div class="hero-content">
+            <h1>Become a Donor</h1>
+            <p>Your blood donation can save up to three lives. Join thousands of donors and make a difference today.</p>
+        </div>
+        <div class="hero-wave">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#f8f9fa" fill-opacity="1" d="M0,128L48,144C96,160,192,192,288,186.7C384,181,480,139,576,117.3C672,96,768,96,864,122.7C960,149,1056,203,1152,208C1248,213,1344,171,1392,149.3L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+        </div>
+    </section>
+    
+    <!-- Eligibility Section -->
+    <section class="eligibility-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Donation Eligibility</h2>
+                <p>Before you donate, please check if you meet the following requirements.</p>
+            </div>
+            
+            <div class="eligibility-container">
+                <div class="eligibility-card">
+                    <div class="eligibility-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>General Requirements</h3>
+                    <ul>
+                        <li>Age between 18-65 years</li>
+                        <li>Weight at least 110 lbs (50 kg)</li>
+                        <li>Good health condition</li>
+                        <li>No blood donation in the last 56 days</li>
+                        <li>Proper identification</li>
+                    </ul>
+                </div>
+                
+                <div class="eligibility-card">
+                    <div class="eligibility-icon">
+                        <i class="fas fa-times-circle"></i>
+                    </div>
+                    <h3>Deferral Conditions</h3>
+                    <ul>
+                        <li>Cold, flu, or fever in the past 7 days</li>
+                        <li>Certain medications</li>
+                        <li>Recent tattoos or piercings (past 3 months)</li>
+                        <li>Recent major surgery</li>
+                        <li>Pregnancy or recent childbirth</li>
+                    </ul>
+                </div>
+                
+                <div class="eligibility-card">
+                    <div class="eligibility-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>Health Metrics</h3>
+                    <ul>
+                        <li>Blood pressure: 90-180/60-100 mm Hg</li>
+                        <li>Pulse: 50-100 beats per minute</li>
+                        <li>Hemoglobin: 12.5-20.0 g/dL (male)<br>12.0-20.0 g/dL (female)</li>
+                        <li>Temperature: not exceeding 99.5°F (37.5°C)</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="eligibility-note">
+                <p><strong>Note:</strong> This is not a comprehensive list. The health screening at the donation center will determine your eligibility. For more detailed information, please check our <a href="#">complete eligibility guidelines</a>.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Donation Form Section -->
+    <section class="donation-form-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Schedule Your Donation</h2>
+                <p>Fill out the form below to schedule your blood donation appointment.</p>
+            </div>
+            
+            <div class="form-container">
+                <form id="donationForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name <span class="required">*</span></label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name <span class="required">*</span></label>
+                            <input type="text" id="lastName" name="lastName" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email Address <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number <span class="required">*</span></label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="dob">Date of Birth <span class="required">*</span></label>
+                            <input type="date" id="dob" name="dob" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="bloodType">Blood Type</label>
+                            <select id="bloodType" name="bloodType">
+                                <option value="">Select Blood Type</option>
+                                <option value="A+">A+</option>
+                                <option value="A-">A-</option>
+                                <option value="B+">B+</option>
+                                <option value="B-">B-</option>
+                                <option value="AB+">AB+</option>
+                                <option value="AB-">AB-</option>
+                                <option value="O+">O+</option>
+                                <option value="O-">O-</option>
+                                <option value="unknown">I don't know</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="donationDate">Preferred Donation Date <span class="required">*</span></label>
+                            <input type="date" id="donationDate" name="donationDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="donationTime">Preferred Time <span class="required">*</span></label>
+                            <select id="donationTime" name="donationTime" required>
+                                <option value="">Select Time</option>
+                                <option value="9:00">9:00 AM</option>
+                                <option value="10:00">10:00 AM</option>
+                                <option value="11:00">11:00 AM</option>
+                                <option value="12:00">12:00 PM</option>
+                                <option value="13:00">1:00 PM</option>
+                                <option value="14:00">2:00 PM</option>
+                                <option value="15:00">3:00 PM</option>
+                                <option value="16:00">4:00 PM</option>
+                                <option value="17:00">5:00 PM</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group full-width">
+                            <label for="donationCenter">Donation Center <span class="required">*</span></label>
+                            <select id="donationCenter" name="donationCenter" required>
+                                <option value="">Select Donation Center</option>
+                                <option value="main">LifeFlow Main Center - 123 Medical Center Dr</option>
+                                <option value="downtown">Downtown Branch - 456 Central Ave</option>
+                                <option value="westside">Westside Medical Plaza - 789 Western Blvd</option>
+                                <option value="eastside">Eastside Community Hospital - 321 Eastern Pkwy</option>
+                                <option value="mobile">Mobile Blood Drive (Check Calendar)</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group full-width">
+                            <label for="previousDonation">Have you donated blood before?</label>
+                            <div class="radio-group">
+                                <label><input type="radio" name="previousDonation" value="yes"> Yes</label>
+                                <label><input type="radio" name="previousDonation" value="no"> No</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row" id="lastDonationRow" style="display: none;">
+                        <div class="form-group full-width">
+                            <label for="lastDonation">When was your last donation? (Approximate)</label>
+                            <input type="date" id="lastDonation" name="lastDonation">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group full-width">
+                            <label for="additionalNotes">Additional Notes or Comments</label>
+                            <textarea id="additionalNotes" name="additionalNotes" rows="3"></textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group full-width">
+                            <label class="checkbox-container">
+                                <input type="checkbox" id="termsAgree" name="termsAgree" required>
+                                <span class="checkmark"></span>
+                                I confirm that I have read the eligibility requirements and believe I am eligible to donate blood. I understand that a final determination will be made during my health screening.
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group full-width">
+                            <label class="checkbox-container">
+                                <input type="checkbox" id="contactConsent" name="contactConsent">
+                                <span class="checkmark"></span>
+                                I would like to receive updates about blood drives, critical blood needs, and other LifeFlow initiatives.
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-buttons">
+                        <button type="submit" class="btn btn-primary">Schedule Appointment</button>
+                        <button type="reset" class="btn btn-outline">Reset Form</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <!-- What to Expect Section -->
+    <section class="expect-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>What to Expect</h2>
+                <p>Here's what you can expect during your donation visit.</p>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-icon">
+                            <i class="fas fa-clipboard-check"></i>
+                        </div>
+                        <h3>Registration (5-10 min)</h3>
+                        <p>Check in at the reception desk with your ID. You'll complete a brief registration form if it's your first time.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-icon">
+                            <i class="fas fa-file-medical"></i>
+                        </div>
+                        <h3>Health History (10-15 min)</h3>
+                        <p>Answer questions about your health history and travel to ensure donation safety for both you and recipients.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-icon">
+                            <i class="fas fa-stethoscope"></i>
+                        </div>
+                        <h3>Mini Physical (5 min)</h3>
+                        <p>Quick check of temperature, pulse, blood pressure, and hemoglobin levels to ensure you're healthy enough to donate.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-icon">
+                            <i class="fas fa-tint"></i>
+                        </div>
+                        <h3>Blood Donation (8-10 min)</h3>
+                        <p>The actual donation process is quick and relatively painless. A whole blood donation takes about 8-10 minutes.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-icon">
+                            <i class="fas fa-cookie-bite"></i>
+                        </div>
+                        <h3>Refreshments (15 min)</h3>
+                        <p>Enjoy snacks and drinks in our refreshment area. This helps replenish fluids and raise your blood sugar level.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="expect-note">
+                <p><i class="fas fa-clock"></i> <strong>Total Time:</strong> The entire process takes about 45-60 minutes, with the actual donation only taking about 8-10 minutes.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Tips Section -->
+    <section class="tips-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Tips for a Successful Donation</h2>
+                <p>Follow these tips to make your blood donation experience comfortable and successful.</p>
+            </div>
+            
+            <div class="tips-container">
+                <div class="tip-card">
+                    <div class="tip-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>Before Donation</h3>
+                    <ul>
+                        <li>Eat a healthy meal within 3 hours of donating</li>
+                        <li>Drink plenty of fluids (non-alcoholic)</li>
+                        <li>Get a good night's sleep</li>
+                        <li>Wear comfortable clothing with sleeves that can be rolled up</li>
+                        <li>Bring your ID and list of medications you take</li>
+                    </ul>
+                </div>
+                
+                <div class="tip-card">
+                    <div class="tip-icon">
+                        <i class="fas fa-procedures"></i>
+                    </div>
+                    <h3>During Donation</h3>
+                    <ul>
+                        <li>Relax and take deep breaths</li>
+                        <li>Inform staff if you feel uncomfortable</li>
+                        <li>Try flexing your ankles to promote circulation</li>
+                        <li>Think positive thoughts to reduce anxiety</li>
+                        <li>Let staff know if you have a preferred arm</li>
+                    </ul>
+                </div>
+                
+                <div class="tip-card">
+                    <div class="tip-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>After Donation</h3>
+                    <ul>
+                        <li>Rest for at least 15 minutes</li>
+                        <li>Drink extra fluids for the next 48 hours</li>
+                        <li>Avoid heavy lifting or strenuous activity for 24 hours</li>
+                        <li>Keep the bandage on for several hours</li>
+                        <li>Eat iron-rich foods to replenish iron stores</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+                <p>Find answers to common questions about blood donation.</p>
+            </div>
+            
+            <div class="accordion-container">
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h3>How often can I donate blood?</h3>
+                        <span class="accordion-icon"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>You can donate whole blood every 56 days (8 weeks). If you donate platelets, you can donate more frequently - up to 24 times a year with at least 7 days between donations.</p>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h3>Is blood donation painful?</h3>
+                        <span class="accordion-icon"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Most donors report minimal discomfort - just a quick pinch when the needle is inserted. The actual donation process is typically painless. Our trained staff make the process as comfortable as possible.</p>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h3>How long does the donation process take?</h3>
+                        <span class="accordion-icon"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>The entire process takes about 45-60 minutes, including registration, health screening, donation, and refreshments. The actual blood draw only takes about 8-10 minutes for whole blood donation.</p>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h3>Can I donate if I have tattoos or piercings?</h3>
+                        <span class="accordion-icon"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Generally, you can donate if your tattoo or piercing was done at a licensed facility and is fully healed. In most cases, you'll need to wait 3-4 months after getting a new tattoo or piercing before donating.</p>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h3>Will donating blood make me weak?</h3>
+                        <span class="accordion-icon"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Most donors feel fine after donating blood. Your body replaces the fluid lost within 24 hours and the red blood cells within 4-6 weeks. It's recommended to avoid strenuous activities for the rest of the day and to stay hydrated.</p>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h3>What blood types are most needed?</h3>
+                        <span class="accordion-icon"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>All blood types are needed, but O negative (the universal donor) and O positive (the most common blood type) are often in highest demand. AB plasma is also valuable as it can be transfused to patients of any blood type.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Your Donation Matters</h2>
+                <p>Join our community of lifesavers today. Every donation can save up to three lives.</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn btn-primary">Schedule Now</a>
+                    <a href="#" class="btn btn-outline-light">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="https://i.pinimg.com/736x/78/68/ae/7868ae606b11e951f28b683db70d41a6.jpg" alt="LifeFlow Logo">
+                    <h3>LifeFlow</h3>
+                    <p>Connecting donors and recipients to save lives.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-links-column">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Donate Blood</a></li>
+                            <li><a href="#">Request Blood</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-links-column">
+                        <h4>For Donors</h4>
+                        <ul>
+                            <li><a href="#">Eligibility</a></li>
+                            <li><a href="#">Donation Process</a></li>
+                            <li><a href="#">Health Benefits</a></li>
+                            <li><a href="#">FAQs</a></li>
+                            <li><a href="#">Schedule Appointment</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-links-column">
+                        <h4>For Recipients</h4>
+                        <ul>
+                            <li><a href="#">Request Process</a></li>
+                            <li><a href="#">Emergency Requests</a></li>
+                            <li><a href="#">Blood Availability</a></li>
+                            <li><a href="#">Hospital Integration</a></li>
+                            <li><a href="#">Support Services</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-links-column">
+                        <h4>Contact</h4>
+                        <ul class="contact-info">
+                            <li><i class="fas fa-map-marker-alt"></i> 123 Medical Center Dr, Healthtown, HT 12345</li>
+                            <li><i class="fas fa-phone"></i> (555) 123-4567</li>
+                            <li><i class="fas fa-envelope"></i> info@lifeflow.org</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 LifeFlow Blood Bank Management System. All rights reserved.</p>
+                <ul class="footer-bottom-links">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Navigation Toggle
+            const hamburger = document.getElementById('hamburger');
+            const navLinks = document.getElementById('navLinks');
+            
+            if (hamburger && navLinks) {
+                hamburger.addEventListener('click', function() {
+                    navLinks.classList.toggle('active');
+                });
+            }
+            
+            // Show/hide last donation date field based on previous donation selection
+            const previousDonationRadios = document.querySelectorAll('input[name="previousDonation"]');
+            const lastDonationRow = document.getElementById('lastDonationRow');
+            
+            previousDonationRadios.forEach(radio => {
+                radio.addEventListener('change', function() {
+                    if (this.value === 'yes') {
+                        lastDonationRow.style.display = 'flex';
+                    } else {
+                        lastDonationRow.style.display = 'none';
+                    }
+                });
+            });
+            
+            // Form validation and submission
+            const donationForm = document.getElementById('donationForm');
+            
+            if (donationForm) {
+                donationForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Basic validation
+                    const firstName = document.getElementById('firstName').value;
+                    const lastName = document.getElementById('lastName').value;
+                    const email = document.getElementById('email').value;
+                    const phone = document.getElementById('phone').value;
+                    const dob = document.getElementById('dob').value;
+                    const donationDate = document.getElementById('donationDate').value;
+                    const donationTime = document.getElementById('donationTime').value;
+                    const donationCenter = document.getElementById('donationCenter').value;
+                    const termsAgree = document.getElementById('termsAgree').checked;
+                    
+                    if (!firstName || !lastName || !email || !phone || !dob || !donationDate || !donationTime || !donationCenter || !termsAgree) {
+                        alert('Please fill in all required fields.');
+                        return;
+                    }
+                    
+                    // Calculate age from DOB
+                    const birthDate = new Date(dob);
+                    const today = new Date();
+                    let age = today.getFullYear() - birthDate.getFullYear();
+                    const monthDiff = today.getMonth() - birthDate.getMonth();
+                    
+                    if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+                        age--;
+                    }
+                    
+                    // Check age eligibility
+                    if (age < 18 || age > 65) {
+                        alert('You must be between 18 and 65 years old to donate blood.');
+                        return;
+                    }
+                    
+                    // Validate email format
+                    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailPattern.test(email)) {
+                        alert('Please enter a valid email address.');
+                        return;
+                    }
+                    
+                    // Check that donation date is not in the past
+                    const selectedDate = new Date(donationDate);
+                    if (selectedDate < new Date().setHours(0, 0, 0, 0)) {
+                        alert('Please select a future date for your donation.');
+                        return;
+                    }
+                    
+                    // If everything is valid, show success message
+                    alert('Thank you! Your donation appointment has been scheduled. You will receive a confirmation email shortly.');
+                    donationForm.reset();
+                });
+            }
+            
+            // Accordion functionality for FAQs
+            const accordionHeaders = document.querySelectorAll('.accordion-header');
+            
+            accordionHeaders.forEach(header => {
+                header.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                    const content = this.nextElementSibling;
+                    const icon = this.querySelector('.accordion-icon i');
+                    
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                        icon.classList.remove('fa-minus');
+                        icon.classList.add('fa-plus');
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                        icon.classList.remove('fa-plus');
+                        icon.classList.add('fa-minus');
+                    }
+                });
+            });
+            
+            // Scroll animations
+            const elementsToAnimate = document.querySelectorAll('.eligibility-card, .tip-card, .timeline-item, .section-title');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+            
+            elementsToAnimate.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+</body>
+</html>
