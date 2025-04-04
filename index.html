@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LifeFlow - Blood Bank Management System</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="https://i.pinimg.com/736x/78/68/ae/7868ae606b11e951f28b683db70d41a6.jpg" alt="LifeFlow Logo">
+                <h1>LifeFlow</h1>
+            </div>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="donor.html">Donate</a></li>
+                <li><a href="#">Request Blood</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            
+            <div class="nav-buttons">
+                <a href="login.html" class="btn btn-outline">Login</a>
+                <a href="register.html" class="btn btn-primary">Register</a>
+            </div>
+            
+            <div class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+        </div>
+        <div class="hero-content">
+            <h1>Every Drop Counts</h1>
+            <p>Join our mission to ensure blood is available to everyone who needs it. Donate today or request blood through our streamlined management system.</p>
+            <div class="hero-buttons">
+                <a href="#" class="btn btn-light">Become a Donor</a>
+                <a href="#" class="btn btn-secondary">Learn More</a>
+            </div>
+        </div>
+        <div class="hero-wave">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#f8f9fa" fill-opacity="1" d="M0,128L48,144C96,160,192,192,288,186.7C384,181,480,139,576,117.3C672,96,768,96,864,122.7C960,149,1056,203,1152,208C1248,213,1344,171,1392,149.3L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+        </div>
+    </section>
+    
+    <!-- Info Cards -->
+    <section class="info-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Donate Blood?</h2>
+                <p>Your donation can save up to three lives. Learn more about the impact of blood donation.</p>
+            </div>
+            
+            <div class="info-cards">
+                <div class="info-card">
+                    <div class="card-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>Save Lives</h3>
+                    <p>One donation can save up to three lives and help countless others.</p>
+                </div>
+                
+                <div class="info-card">
+                    <div class="card-icon">
+                        <i class="fas fa-hand-holding-medical"></i>
+                    </div>
+                    <h3>Emergency Need</h3>
+                    <p>Every two seconds, someone needs blood. Your donation is vital for emergencies.</p>
+                </div>
+                
+                <div class="info-card">
+                    <div class="card-icon">
+                        <i class="fas fa-hospital-user"></i>
+                    </div>
+                    <h3>Support Patients</h3>
+                    <p>Help patients undergoing surgeries, cancer treatments, and chronic illnesses.</p>
+                </div>
+                
+                <div class="info-card">
+                    <div class="card-icon">
+                        <i class="fas fa-notes-medical"></i>
+                    </div>
+                    <h3>Health Benefits</h3>
+                    <p>Donating blood provides health benefits including reduced risk of heart disease.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Blood Inventory -->
+    <section class="inventory-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Current Blood Inventory</h2>
+                <p>Check our current blood inventory levels and help us meet the demand.</p>
+            </div>
+            
+            <div class="inventory-container">
+                <div class="inventory-card">
+                    <div class="blood-type">A+</div>
+                    <div class="progress-container">
+                        <div class="progress-bar" data-percentage="70"></div>
+                    </div>
+                    <div class="inventory-status">
+                        <span class="status-text adequate">Adequate</span>
+                        <span class="units">125 units</span>
+                    </div>
+                </div>
+                
+                <div class="inventory-card">
+                    <div class="blood-type">B+</div>
+                    <div class="progress-container">
+                        <div class="progress-bar" data-percentage="45"></div>
+                    </div>
+                    <div class="inventory-status">
+                        <span class="status-text low">Low</span>
+                        <span class="units">68 units</span>
+                    </div>
+                </div>
+                
+                <div class="inventory-card">
+                    <div class="blood-type">AB+</div>
+                    <div class="progress-container">
+                        <div class="progress-bar" data-percentage="30"></div>
+                    </div>
+                    <div class="inventory-status">
+                        <span class="status-text critical">Critical</span>
+                        <span class="units">32 units</span>
+                    </div>
+                </div>
+                
+                <div class="inventory-card">
+                    <div class="blood-type">O+</div>
+                    <div class="progress-container">
+                        <div class="progress-bar" data-percentage="85"></div>
+                    </div>
+                    <div class="inventory-status">
+                        <span class="status-text adequate">Adequate</span>
+                        <span class="units">196 units</span>
+                    </div>
+                </div>
+                
+                <div class="inventory-card">
+                    <div class="blood-type">A-</div>
+                    <div class="progress-container">
+                        <div class="progress-bar" data-percentage="50"></div>
+                    </div>
+                    <div class="inventory-status">
+                        <span class="status-text low">Low</span>
+                        <span class="units">45 units</span>
+                    </div>
+                </div>
+                
+                <div class="inventory-card">
+                    <div class="blood-type">B-</div>
+                    <div class="progress-container">
+                        <div class="progress-bar" data-percentage="25"></div>
+                    </div>
+                    <div class="inventory-status">
+                        <span class="status-text critical">Critical</span>
+                        <span class="units">18 units</span>
+                    </div>
+                </div>
+                
+                <div class="inventory-card">
+                    <div class="blood-type">AB-</div>
+                    <div class="progress-container">
+                        <div class="progress-bar" data-percentage="20"></div>
+                    </div>
+                    <div class="inventory-status">
+                        <span class="status-text critical">Critical</span>
+                        <span class="units">12 units</span>
+                    </div>
+                </div>
+                
+                <div class="inventory-card">
+                    <div class="blood-type">O-</div>
+                    <div class="progress-container">
+                        <div class="progress-bar" data-percentage="40"></div>
+                    </div>
+                    <div class="inventory-status">
+                        <span class="status-text low">Low</span>
+                        <span class="units">37 units</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Process Section -->
+    <section class="process-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Donation Process</h2>
+                <p>Understanding the blood donation process can help make your experience more comfortable.</p>
+            </div>
+            
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3>Registration</h3>
+                        <p>Sign up online or in person with valid identification.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3>Health Screening</h3>
+                        <p>Quick health check and questionnaire to ensure donation safety.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3>Blood Collection</h3>
+                        <p>The actual donation takes only 8-10 minutes of your time.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <h3>Refreshments</h3>
+                        <p>Rest and enjoy refreshments while recovering after donation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Success Stories</h2>
+                <p>Read how blood donation has made a difference in people's lives.</p>
+            </div>
+            
+            <div class="testimonials-slider" id="testimonialsSlider">
+                <div class="testimonial-card">
+                    <div class="testimonial-image">
+                        <img src="images/testimonial1.jpg" alt="Sarah Johnson">
+                    </div>
+                    <div class="testimonial-content">
+                        <p>"After my surgery, I needed multiple blood transfusions. I'm forever grateful to the anonymous donors who saved my life. Now I'm a regular donor myself."</p>
+                        <h4>Sarah Johnson</h4>
+                        <span>Blood Recipient & Donor</span>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-image">
+                        <img src="images/testimonial2.jpg" alt="Michael Chen">
+                    </div>
+                    <div class="testimonial-content">
+                        <p>"As a cancer survivor, I received numerous transfusions during treatment. Each bag of blood was like a gift of life. Thank you to all donors!"</p>
+                        <h4>Michael Chen</h4>
+                        <span>Cancer Survivor</span>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-image">
+                        <img src="images/testimonial3.jpg" alt="Emma Rodriguez">
+                    </div>
+                    <div class="testimonial-content">
+                        <p>"My son was born with a blood disorder requiring regular transfusions. We're deeply thankful to every person who takes the time to donate."</p>
+                        <h4>Emma Rodriguez</h4>
+                        <span>Mother of Blood Recipient</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-controls">
+                <button class="testimonial-btn prev-btn" id="prevTestimonial">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="testimonial-dots" id="testimonialDots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                <button class="testimonial-btn next-btn" id="nextTestimonial">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Make a Difference?</h2>
+                <p>Your donation can save lives. Schedule an appointment today or register to become a regular donor.</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn btn-primary">Schedule Donation</a>
+                    <a href="#" class="btn btn-outline-light">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/logo.png" alt="LifeFlow Logo">
+                    <h3>LifeFlow</h3>
+                    <p>Connecting donors and recipients to save lives.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-links-column">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Donate Blood</a></li>
+                            <li><a href="#">Request Blood</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-links-column">
+                        <h4>For Donors</h4>
+                        <ul>
+                            <li><a href="#">Eligibility</a></li>
+                            <li><a href="#">Donation Process</a></li>
+                            <li><a href="#">Health Benefits</a></li>
+                            <li><a href="#">FAQs</a></li>
+                            <li><a href="#">Schedule Appointment</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-links-column">
+                        <h4>For Recipients</h4>
+                        <ul>
+                            <li><a href="#">Request Process</a></li>
+                            <li><a href="#">Emergency Requests</a></li>
+                            <li><a href="#">Blood Availability</a></li>
+                            <li><a href="#">Hospital Integration</a></li>
+                            <li><a href="#">Support Services</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-links-column">
+                        <h4>Contact</h4>
+                        <ul class="contact-info">
+                            <li><i class="fas fa-map-marker-alt"></i> 123 Medical Center Dr, Healthtown, HT 12345</li>
+                            <li><i class="fas fa-phone"></i> (555) 123-4567</li>
+                            <li><i class="fas fa-envelope"></i> info@lifeflow.org</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 LifeFlow Blood Bank Management System. All rights reserved.</p>
+                <ul class="footer-bottom-links">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Navigation Toggle
+            const hamburger = document.getElementById('hamburger');
+            const navLinks = document.getElementById('navLinks');
+            
+            if (hamburger && navLinks) {
+                hamburger.addEventListener('click', function() {
+                    navLinks.classList.toggle('active');
+                });
+            }
+            
+            // Animate Progress Bars
+            const progressBars = document.querySelectorAll('.progress-bar');
+            
+            progressBars.forEach(bar => {
+                const percentage = bar.getAttribute('data-percentage');
+                setTimeout(() => {
+                    bar.style.width = percentage + '%';
+                    
+                    // Set color based on percentage
+                    if (percentage < 30) {
+                        bar.style.backgroundColor = '#e63946'; // Critical
+                    } else if (percentage < 60) {
+                        bar.style.backgroundColor = '#e9c46a'; // Low
+                    } else {
+                        bar.style.backgroundColor = '#2a9d8f'; // Adequate
+                    }
+                }, 300);
+            });
+            
+            // Testimonials Slider
+            const testimonialsSlider = document.getElementById('testimonialsSlider');
+            const testimonialCards = testimonialsSlider ? testimonialsSlider.querySelectorAll('.testimonial-card') : [];
+            const dots = document.querySelectorAll('.dot');
+            const prevBtn = document.getElementById('prevTestimonial');
+            const nextBtn = document.getElementById('nextTestimonial');
+            
+            let currentSlide = 0;
+            
+            if (testimonialCards.length > 0) {
+                // Function to update slider display
+                function showSlide(index) {
+                    // Hide all testimonials
+                    testimonialCards.forEach(card => {
+                        card.style.opacity = '0';
+                        card.style.transform = 'translateX(20px)';
+                        card.style.display = 'none';
+                    });
+                    
+                    // Show current testimonial
+                    testimonialCards[index].style.display = 'flex';
+                    setTimeout(() => {
+                        testimonialCards[index].style.opacity = '1';
+                        testimonialCards[index].style.transform = 'translateX(0)';
+                    }, 100);
+                    
+                    // Update dots
+                    dots.forEach((dot, i) => {
+                        dot.classList.toggle('active', i === index);
+                    });
+                }
+                
+                // Initialize slider
+                showSlide(currentSlide);
+                
+                // Event listeners for controls
+                if (prevBtn) {
+                    prevBtn.addEventListener('click', () => {
+                        currentSlide = (currentSlide - 1 + testimonialCards.length) % testimonialCards.length;
+                        showSlide(currentSlide);
+                    });
+                }
+                
+                if (nextBtn) {
+                    nextBtn.addEventListener('click', () => {
+                        currentSlide = (currentSlide + 1) % testimonialCards.length;
+                        showSlide(currentSlide);
+                    });
+                }
+                
+                // Add click events to dots
+                dots.forEach((dot, i) => {
+                    dot.addEventListener('click', () => {
+                        currentSlide = i;
+                        showSlide(currentSlide);
+                    });
+                });
+                
+                // Auto slide change
+                setInterval(() => {
+                    if (document.hasFocus()) {
+                        currentSlide = (currentSlide + 1) % testimonialCards.length;
+                        showSlide(currentSlide);
+                    }
+                }, 5000);
+            }
+            
+            // Scroll animations
+            const elementsToAnimate = document.querySelectorAll('.info-card, .process-step, .section-title, .inventory-card');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+            
+            elementsToAnimate.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+</body>
+</html>
