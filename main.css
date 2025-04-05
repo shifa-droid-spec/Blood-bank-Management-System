@@ -26,6 +26,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    
 }
 
 body {
@@ -206,14 +207,14 @@ body {
     padding: 10rem 2rem 8rem;
     text-align: center;
     position: relative;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .hero-content {
     max-width: 800px;
     margin: 0 auto;
     position: relative;
-    z-index: 2;
+    z-index: 3;
 }
 
 .hero h1 {
@@ -251,8 +252,8 @@ body {
 
 .shape {
     position: absolute;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
+    background-color: rgba(121, 17, 17, 0.1);
+    border-radius: 60%;
 }
 
 .shape-1 {
@@ -284,12 +285,14 @@ body {
 }
 
 .hero-wave {
-    position: absolute;
+   position: fixed;
     bottom: -10px;
     left: 0;
     width: 100%;
-    z-index: 3;
+    z-index:0 ;
     line-height: 0;
+    height: 100px; 
+  
 }
 
 /* Section Styles */
@@ -407,15 +410,18 @@ section {
 .inventory-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 1.5rem;
-    margin-top: 2rem;
+    gap: 20px;
+    margin:auto;
+    max-width: 800px;
+    padding: 20px;
+
 }
 
 .inventory-card {
     background: white;
-    border-radius: var(--border-radius);
+    border-radius:5px;
     box-shadow: var(--shadow);
-    padding: 1.5rem;
+    padding: 10px;
     text-align: center;
     transition: var(--transition);
     opacity: 0;
@@ -940,8 +946,10 @@ section {
         font-size: 1.8rem;
     }
     
-    .info-cards {
-        grid-template-columns: 1fr;
+    @media (min-width: 1024px) {
+        .info-cards {
+            grid-template-columns: repeat(4, 1fr);
+        }
     }
     
     .footer-links {
