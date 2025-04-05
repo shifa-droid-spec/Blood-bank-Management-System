@@ -36,7 +36,9 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-
+html {
+    scroll-behavior: smooth;
+}
 body {
     background-color: #f5f5f5;
     color:#333 ;
@@ -298,7 +300,7 @@ body {
     width: 100%;
     z-index: 3;
     line-height: 0;
-   
+    height: 100px;
 }
 
 /* Eligibility Section */
@@ -780,30 +782,30 @@ body {
 
 /* Call to Action Section */
 .cta-section {
-    padding: 80px 0;
-    background-color: var(--primary-color);
+    background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
     color: white;
+    padding: 5rem 0;
     text-align: center;
 }
-
+.cta-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
 .cta-content h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .cta-content p {
-    font-size: 18px;
-    margin-bottom: 30px;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
 }
 
 .cta-buttons {
     display: flex;
     justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 /* Footer */
